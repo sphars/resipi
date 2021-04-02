@@ -1,20 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resipi</title>
+    <title>Recipe Markdown Generator</title>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/spncrhrstn/yacck/yacck.min.css">
+
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Fira+Mono&family=Rubik&display=swap" rel="stylesheet"> -->
+
+    <style>
+        #filename{
+            -moz-user-select: all;
+            -webkit-user-select: all;
+            -ms-user-select: all;
+            user-select: all;
+            cursor: pointer;
+        }
+
+        #markup{
+            font-family: var(--font-monospace);
+        }
+    </style>
 <body>
+
     <main>
         <section>
 
-            <h1>Resipi</h1>
-            <p>Making recipes simple.</p>
-            <p><a href="new.html">Create new recipe</a></p>
+            <h1>Recipe Markdown Generator</h1>
+            <p>Use the form below to generate Markdown for your recipe, for use in your static site generator.</p>
+        </section>
+
+        <section>
+
+            <form id="newRecipe">
+                <h3>Recipe Details</h3>
+
+                <div>
+                    <label for="title">Title</label>
+                    <input type="text" id="title" name="title" required>
+                </div>
+
+                <div>
+                    <label for="author">Author</label>
+                    <input type="text" id="author" name="author">
+                </div>
+
+                <div>
+                    <label for="description">Description</label>
+                    <textarea id="description" name="description" rows="3"></textarea>
+                    <small>Enter a short description for your recipe</small>
+                </div>
+
+                <div>
+                    <label for="servings">Servings</label>
+                    <input type="text" id="servings" name="servings">
+                </div>
+
+                <div>
+                    <label for="time">Prep Time</label>
+                    <input type="text" id="time" name="time">
+                </div>
+
+                <div>
+                    <label for="tags">Tags</label>
+                    <input type="text" id="tags" name="tags">
+                    <small>Comma-separated list of tags</small>
+                </div>
+
+                <hr>
+
+                <div>
+                    <label for="ingredients">Ingredients</label>
+                    <textarea id="ingredients" name="ingredients" rows="6" placeholder="1 slice bread&#10;1 tbsp peanut butter"></textarea>
+                    <small>One ingredient per line</small>
+                </div>
+
+                <div>
+                    <label for="directions">Directions</label>
+                    <textarea id="directions" name="directions" rows="6" placeholder="Place bread in toaster and toast&#10;Spread peanut butter on toast"></textarea>
+                    <small>One direction per line (don't include line numbers)</small>
+                </div>
+
+                <div>
+                    <label for="notes">Notes</label>
+                    <textarea id="notes" name="notes" rows="4"></textarea>
+                    <small>Any additonal notes regarding your recipe</small>
+                </div>
+
+                <div>
+                    <label for="sourceName">Source Name</label>
+                    <input type="text" id="sourceName" name="sourceName">
+                </div>
+                
+                <div>
+                    <label for="sourceUrl">Source URL</label>
+                    <input type="url" id="sourceUrl" name="sourceUrl" placeholder="https://www.example.com">
+                    <small>Source fields optional - where did this recipe come from?</small>
+                </div>
+
+                <div>
+                    <button type="submit">Generate Markdown</button>
+                    <button type="button" id="testBtn">Use example recipe</button>
+                    <button type="reset">Reset Form</button>
+                </div>
+
+                <div>
+                    <label for="markup"><h5>Generated Markdown for Recipe</h5></label>
+                    <textarea id="markup" rows="10" readonly></textarea>
+                    <small>Save recipe as <span id="filename"></span></small>
+                </div>
+
+            </form>
         </section>
     </main>
+
+    <script src="/js/recipe.js"></script>
 </body>
+
 </html>

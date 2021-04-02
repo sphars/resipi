@@ -6,8 +6,6 @@ form.addEventListener('submit', function(event){
     event.preventDefault();
     
     let formData = Object.fromEntries(new FormData(event.target));
-    console.log(formData);
-    debugger;
     GenerateMarkup(formData);
 });
 
@@ -42,20 +40,17 @@ Source: [${recipe.sourceName}](${recipe.sourceUrl})`
 
 
 function LinesToList(lines, delimeter){
-    console.log(typeof(lines));
     // split lines by newline char
     let splitLines = lines.split("\n");
-    console.log(typeof(splitLines));
-    console.log(Array.isArray(splitLines));
 
-    //remove empty lines
+    //TODO: remove empty lines
 
     // loop through lines and add the delimiter prefix
     splitLines.forEach(function(item, i){
         splitLines[i] = `${delimeter == '-' ? '-' : `${i + 1}.` } ${item}`
     });
 
-    // return lines as one string
+    // return lines as one string for output
     return splitLines.join("\n");
 }
 
@@ -65,10 +60,10 @@ let testBtn = document.getElementById('testBtn');
 testBtn.addEventListener('click', function(event){
     event.preventDefault();
 
-    DummyData();
+    FillDummyData();
 });
 
-function DummyData(){
+function FillDummyData(){
     let dummyRecipe =
     {
         "title": "Easy Queso Dip",
