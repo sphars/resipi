@@ -1,16 +1,20 @@
-# Easy Crockpot Chicken Taquitos 
-This simple recipe can be thrown together quickly with few ingredients.
+# Crockpot Chicken Taquitos
+Author: Spencer  
+
+These simple taquitos can be thrown together quickly with few ingredients.  
 
 Serves: 4-6  
-Prep Time: 4.5 hours  
+Time: 4.5 hours  
 Tags: chicken, dinner, crockpot
 
-* 2 chicken breasts
-* 1 package cream cheese
-* 1 packet taco seasoning
-* 8 oz shredded cheese
-* 10 flour tortillas
+## Ingredients
+- 2 chicken breasts
+- 1 package cream cheese
+- 1 packet taco seasoning
+- 8 oz shredded cheese
+- 10 flour tortillas
 
+## Directions
 1. Place the chicken breast in the bottom of the crockpot
 2. Cube the cream cheese (about 8 cubes) and place the cubes on top of the chicken
 3. Sprinkle the taco seasoning over the chicken and cream cheese
@@ -21,5 +25,7 @@ Tags: chicken, dinner, crockpot
 8. Place two spoonfuls of the chicken mixture onto a tortilla. Roll the tortilla and place on a baking sheet. Repeat with the rest of the chicken and tortillas.
 9. Spray the tortillas with cooking spray and place in oven. Cook for 12-14 minutes, or until the taquitos are crispy and golden brown.
 
-## Notes
+### Notes
 If the chicken is a little dry after shredding, add a tablespoon or two of water.
+
+Source: [Tasty Treats](https://example.com/crockpot-chicken-taquitos)
